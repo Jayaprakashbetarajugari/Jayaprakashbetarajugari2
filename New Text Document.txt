@@ -1,0 +1,74 @@
+class Parent:
+
+    def display(self):
+
+        print("This is from the Parent class")
+
+
+
+
+class Child(Parent):
+
+    def display(self):
+
+        super().display()
+
+
+
+
+c = Child()
+
+c.display()
+
+
+
+
+
+
+
+
+
+
+
+class daddy:
+
+    def details(self, name, sur_name, age, place):
+
+        self.name = name
+
+        self.sur_name = sur_name
+
+        self.age = age
+
+        self.place = place
+
+        print("name:", name, "sur name:", sur_name, "age:", age, "place:", place)
+
+
+
+
+venkat = daddy()
+
+venkat.details("venkat", "chandana", 65, "hyd")
+
+
+
+
+class surya(daddy):
+
+    def details(self, name, age):
+
+        super().details(name, self.sur_name, age, self.place)
+
+        print("name:", name, "sur name:", self.sur_name, "age:", age)
+
+
+
+
+name = surya()
+
+name.details("surya", 40)
+
+
+
+
